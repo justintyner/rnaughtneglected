@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wounds Worms and Vectors - Podcast</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Wounds Worms and Vectors Logo" class="logo-image">
+                <h2>Wounds Worms and Vectors</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#episodes" class="nav-link">Episodes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Wounds Worms and Vectors</h1>
+                <p class="hero-subtitle">Exploring neglected tropical diseases through research, stories, and hope</p>
+                <p class="hero-description">
+                    Join us as we dive deep into the world of neglected tropical diseases, 
+                    sharing research insights, personal stories, and the incredible work 
+                    being done to combat these global health challenges.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#episodes" class="btn btn-primary">Listen Now</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="podcast-cover">
+                    <img src="images/logo.png" alt="Wounds Worms and Vectors Logo" class="hero-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About the Podcast</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>
+                        Wounds Worms and Vectors is dedicated to raising awareness about neglected tropical diseases (NTDs) 
+                        and supporting the researchers who work tirelessly to understand and combat these conditions. 
+                        Through our podcast, we aim to bridge the gap between scientific research and public understanding.
+                    </p>
+                    
+                    <h3>What We Cover</h3>
+                    <p>
+                        Each episode explores different aspects of NTDs, from cutting-edge research and treatment developments 
+                        to the human stories behind the science. We interview researchers, healthcare workers, and affected 
+                        communities to provide a comprehensive view of these global health challenges.
+                    </p>
+                    
+                    <h3>Our Vision</h3>
+                    <p>
+                        We're building a future non-profit organization focused on supporting NTD research and providing 
+                        resources to researchers worldwide. This podcast is just the beginning of our journey to make a 
+                        meaningful impact in global health.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h4>Diseases Covered</h4>
+                        <p>20+ NTDs</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Research Focus</h4>
+                        <p>Global Impact</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Mission</h4>
+                        <p>Research Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="episodes" class="episodes">
+        <div class="container">
+            <h2 class="section-title">Latest Episodes</h2>
+            <div class="episodes-grid">
+                <div class="episode-card">
+                    <div class="episode-cover">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="episode-content">
+                        <h3>Episode 1: Introduction to NTDs</h3>
+                        <p class="episode-description">
+                            An overview of neglected tropical diseases and why they matter to global health.
+                        </p>
+                        <div class="episode-meta">
+                            <span class="episode-duration">45 min</span>
+                            <span class="episode-date">Dec 15, 2024</span>
+                        </div>
+                        <button class="btn btn-play" onclick="playEpisode(1)">
+                            <i class="fas fa-play"></i> Play Episode
+                        </button>
+                    </div>
+                </div>
+
+                <div class="episode-card">
+                    <div class="episode-cover">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="episode-content">
+                        <h3>Episode 2: Research Spotlight</h3>
+                        <p class="episode-description">
+                            Highlighting breakthrough research in NTD treatment and prevention.
+                        </p>
+                        <div class="episode-meta">
+                            <span class="episode-duration">52 min</span>
+                            <span class="episode-date">Dec 22, 2024</span>
+                        </div>
+                        <button class="btn btn-play" onclick="playEpisode(2)">
+                            <i class="fas fa-play"></i> Play Episode
+                        </button>
+                    </div>
+                </div>
+
+                <div class="episode-card">
+                    <div class="episode-cover">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="episode-content">
+                        <h3>Episode 3: Community Impact</h3>
+                        <p class="episode-description">
+                            Stories from communities affected by NTDs and the healthcare workers helping them.
+                        </p>
+                        <div class="episode-meta">
+                            <span class="episode-duration">48 min</span>
+                            <span class="episode-date">Dec 29, 2024</span>
+                        </div>
+                        <button class="btn btn-play" onclick="playEpisode(3)">
+                            <i class="fas fa-play"></i> Play Episode
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    <p>
+                        Have questions about our podcast or want to get involved in NTD research? 
+                        We'd love to hear from you. Send us a message and we'll get back to you as soon as possible.
+                    </p>
+                                            <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@rnaughtneglected.org</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                <span>www.rnaughtneglected.org</span>
+                            </div>
+                        </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Wounds Worms and Vectors</h3>
+                    <p>Supporting research and awareness of neglected tropical diseases.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#episodes">Episodes</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        <a href="#"><i class="fab fa-apple"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wounds Worms and Vectors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Player Modal -->
+    <div id="audioModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="audio-player">
+                <h3 id="episodeTitle">Episode Title</h3>
+                <div class="player-controls">
+                    <audio id="audioPlayer" controls>
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="episode-notes">
+                    <h4>Show Notes</h4>
+                    <div id="showNotes">
+                        <p>Episode description and reference materials will appear here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
