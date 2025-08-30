@@ -59,7 +59,7 @@ const episodes = {
             </ul>
             
             <h5>Contact Information</h5>
-            <p>For questions about this episode or to suggest future topics, email us at info@rnaughtneglected.org</p>
+            <p>For questions about this episode or to suggest future topics, email us at harmony@rnaughtneglected.org</p>
         `
     },
     2: {

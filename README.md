@@ -62,7 +62,7 @@ Modify the contact details in `index.html`:
 ```html
 <div class="contact-item">
     <i class="fas fa-envelope"></i>
-    <span>info@rnaughtneglected.org</span>
+    <span>harmony@rnaughtneglected.org</span>
 </div>
 ```
 
@@ -178,7 +178,7 @@ Update the footer social links in `index.html`:
 ## Support
 
 For technical support or questions about the website:
-- Email: info@rnaughtneglected.org
+- Email: harmony@rnaughtneglected.org
 - Check the browser console for error messages
 - Verify all files are properly uploaded
 
@@ -189,3 +189,88 @@ This project is created for the Wounds Worms and Vectors podcast. All rights res
 ---
 
 **Note**: This website is designed to support your mission of raising awareness about neglected tropical diseases and supporting research efforts. The clean, professional design reflects the serious nature of your work while maintaining accessibility and ease of use. 
+
+##  **Common Causes of Mixed Content**
+
+### **1. External Resources (Most Likely)**
+Check if these are loading over HTTP:
+- **Google Fonts** (in your CSS)
+- **Font Awesome icons** (in your HTML)
+- **Any external scripts or images**
+
+### **2. Your Current Code Issues**
+Looking at your files, I can see potential problems:
+
+**In `index.html`:**
+```html
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+```
+
+**In `styles.css`:**
+```css
+background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+```
+
+## ️ **Quick Fixes**
+
+### **Fix 1: Force HTTPS for External Resources**
+Update your `index.html` to ensure all external resources use HTTPS:
+
+```html
+<code_block_to_apply_changes_from>
+```
+
+### **Fix 2: Check for HTTP References**
+Search your files for any `http://` references and change them to `https://`
+
+### **Fix 3: Add Security Headers**
+In your Vercel project, you can add security headers to force HTTPS:
+
+Create a `vercel.json` file in your project root:
+```json
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "upgrade-insecure-requests"
+        }
+      ]
+    }
+  ]
+}
+```
+
+##  **How to Debug**
+
+### **Browser Developer Tools:**
+1. **Right-click → Inspect** on your site
+2. **Go to Console tab** - look for mixed content warnings
+3. **Go to Network tab** - look for any HTTP requests
+
+### **Check for Mixed Content:**
+Look for warnings like:
+- "Mixed Content: The page was loaded over HTTPS, but requested an insecure resource"
+- "Blocked loading mixed active content"
+
+## 📱 **Test Your Fixes**
+
+1. **Update your files** with the fixes above
+2. **Push to GitHub** (if using GitHub deployment)
+3. **Wait for Vercel to redeploy** (usually 1-2 minutes)
+4. **Clear browser cache** and test again
+
+## 🎯 **Most Likely Solution**
+
+The issue is probably the external resources (Google Fonts, Font Awesome). Even though they're already HTTPS, sometimes browsers can be picky about mixed content.
+
+Try the `vercel.json` approach first - it's the most comprehensive fix and will force all resources to load securely.
+
+Let me know what you see in the browser console, and I can help you identify the specific resource causing the issue! 

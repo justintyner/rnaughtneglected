@@ -51,10 +51,10 @@ body {
     max-width: 120px;
 }
 
-.nav-logo h2 {
-    color: #393939;
-    font-weight: 700;
-    font-size: 1.5rem;
+.header-logo {
+    height: 50px;
+    width: auto;
+    max-width: 250px;
 }
 
 .nav-menu {
@@ -583,6 +583,11 @@ section {
 
     .logo-image {
         height: 30px;
+    }
+
+    .header-logo {
+        height: 25px;
+        max-width: 150px;
     }
 
     .hero-container {
